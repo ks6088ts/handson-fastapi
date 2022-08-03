@@ -6,7 +6,7 @@ authors = ["ks6088ts <ks6088ts@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 fire = "^0.4.0"
 
 [tool.poetry.dev-dependencies]
