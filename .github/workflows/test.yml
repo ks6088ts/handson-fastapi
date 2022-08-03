@@ -1,0 +1,16 @@
+name: python
+
+on: push
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Run CI test
+        run: make ci-test POETRY_VENV_CREATE=false POETRY_VENV_IN_PROJECT=false

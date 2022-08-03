@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "handson-fastapi"
+version = "0.0.1"
+description = "handson for FastAPI"
+authors = ["ks6088ts <ks6088ts@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fire = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+black = "^22.6.0"
+flake8 = "^5.0.3"
+mypy = "^0.971"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+jupyterlab = "^3.4.4"
+mkdocs-material = "^8.3.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
