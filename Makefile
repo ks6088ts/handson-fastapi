@@ -65,3 +65,8 @@ jupyterlab: ## run jupyterlab server
 
 .PHONY: ci-test
 ci-test: install-poetry install-deps-dev format-check lint test docs-build ## ci test
+
+.PHONY: server
+server: ## run server
+	cd src/app \
+		&& $(POETRY_RUN) uvicorn main:app --reload
