@@ -70,3 +70,11 @@ ci-test: install-poetry install-deps-dev format-check lint test docs-build ## ci
 server: ## run server
 	cd src/app \
 		&& $(POETRY_RUN) uvicorn main:app --reload
+
+.PHONY: docker-build
+docker-build: ## build Docker container
+	docker build -t handson-fastapi:latest .
+
+.PHONY: docker-terminal
+docker-terminal: ## run Docker terminal
+	docker run --rm -it handson-fastapi:latest bash
